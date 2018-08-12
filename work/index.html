@@ -25,7 +25,16 @@
   <link rel="stylesheet" type="text/css" href="styles/inline.css">
 
   <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
 
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
 
@@ -166,6 +175,20 @@
 
   <!-- Uncomment the line below when ready to test with fake data -->
   <script src="scripts/app.js" async></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAl4JH29lNr2PgdCupQdLB6gOnmEuSTQp0",
+      authDomain: "weather-pwa-8f596.firebaseapp.com",
+      databaseURL: "https://weather-pwa-8f596.firebaseio.com",
+      projectId: "weather-pwa-8f596",
+      storageBucket: "weather-pwa-8f596.appspot.com",
+      messagingSenderId: "673915441060"
+    };
+    firebase.initializeApp(config);
+  </script>
 
 </body>
 </html>
